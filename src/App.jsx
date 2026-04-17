@@ -124,12 +124,15 @@ function App() {
             {instructions.map((instruction) => (
               <li
                 key={instruction.step}
-                className="leading-[150%] text-card-stone-600"
+                className="flex items-start gap-card-200 pl-card-100 leading-[150%] text-card-stone-600"
               >
-                <span className="font-card-outfit leading-[150%] text-card-rose-800">
+                <span className="shrink-0 font-card-outfit leading-[150%] font-bold text-card-brown-800">
                   {instruction.step}.
                 </span>
-                <strong>{instruction.title}:</strong> {instruction.description}
+                <p className="font-card-outfit text-[16px] leading-card-300 text-card-stone-600">
+                  <strong>{instruction.title}</strong>:{' '}
+                  {instruction.description}
+                </p>
               </li>
             ))}
           </ol>
@@ -138,37 +141,32 @@ function App() {
         <hr className="border-card-stone-150" />
 
         <section className="pt-card-400">
-          <h2>Nutrition</h2>
-          <p>
+          <h2 className="pb-card-300 font-card-young-serif text-[28px] leading-[100%] text-card-brown-800">
+            Nutrition
+          </h2>
+          <p className="pb-card-300 font-card-outfit text-[16px] leading-[150%] text-card-stone-600">
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
-          <table>
+          <table className="w-full">
             <tbody>
-              <tr>
-                <td>Calories</td>
-                <td>
-                  <strong>277kcal</strong>
-                </td>
-              </tr>
-              <tr>
-                <td>Carbs</td>
-                <td>
-                  <strong>0g</strong>
-                </td>
-              </tr>
-              <tr>
-                <td>Protein</td>
-                <td>
-                  <strong>20g</strong>
-                </td>
-              </tr>
-              <tr>
-                <td>Fat</td>
-                <td>
-                  <strong>22g</strong>
-                </td>
-              </tr>
+              {nutrition.map((item, index) => (
+                <tr
+                  key={item.name}
+                  className={
+                    index !== nutrition.length - 1
+                      ? 'border-b border-card-stone-150'
+                      : ''
+                  }
+                >
+                  <td className="py-card-150 pl-card-400 font-card-outfit text-[16px] leading-[150%] text-card-stone-600">
+                    {item.name}
+                  </td>
+                  <td className="pr-card-400 pl-card-200 font-card-outfit text-[16px] leading-[150%] font-bold text-card-brown-800">
+                    {item.value}
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </section>
