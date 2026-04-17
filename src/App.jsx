@@ -63,7 +63,7 @@ function App() {
   ];
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-[375px] flex-col items-center md:my-card-1600 md:max-w-[616px] md:rounded-[24px] md:bg-white md:p-card-500">
+    <main className="mx-auto flex min-h-screen max-w-[375px] flex-col items-center md:my-card-1600 md:max-w-[616px] md:rounded-[24px] md:bg-white md:p-card-500 xl:max-w-[736px]">
       <figure className="h-[171px] w-full overflow-hidden md:h-[300px] md:rounded-[12px]">
         <img
           src={omelette}
