@@ -16,7 +16,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<img width="1920" height="1440" alt="recipe page shots" src="https://github.com/user-attachments/assets/ccc10d52-93e3-4d9e-bd62-37b4e638c358" />
 
 ### Links
 
