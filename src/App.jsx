@@ -63,17 +63,19 @@ function App() {
   ];
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-[375px] flex-col items-center">
-      <figure className="h-[171px] w-full">
+    <main className="mx-auto flex min-h-screen max-w-[375px] flex-col items-center md:my-card-1600 md:max-w-[616px] md:rounded-[24px] md:bg-white md:p-card-500">
+      <figure className="h-[171px] w-full overflow-hidden md:h-[300px] md:rounded-[12px]">
         <img
           src={omelette}
           alt="Crispy golden omelette topped with fresh herbs"
+          className="h-full w-full object-cover"
         />
       </figure>
-      <article className="px-card-400 py-card-500 font-card-outfit text-[16px] leading-[150%] text-card-stone-600">
-        <h1 className="pb-card-300 font-card-young-serif text-4xl leading-[100%] text-card-stone-900">
+      <article className="px-card-400 py-card-500 font-card-outfit text-[16px] leading-[150%] text-card-stone-600 md:px-0 md:pb-0">
+        <h1 className="pb-card-300 font-card-young-serif text-4xl leading-[100%] text-card-stone-900 md:text-[40px]">
           Simple Omelette Recipe
         </h1>
+
         <p className="pb-card-400">
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
