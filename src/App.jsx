@@ -63,36 +63,37 @@ function App() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="mx-auto flex min-h-screen max-w-[375px] flex-col items-center">
       <figure className="h-[171px] w-full">
         <img
           src={omelette}
           alt="Crispy golden omelette topped with fresh herbs"
         />
       </figure>
-      <article className="px-card-400 py-card-500">
+      <article className="px-card-400 py-card-500 font-card-outfit text-[16px] leading-[150%] text-card-stone-600">
         <h1 className="pb-card-300 font-card-young-serif text-4xl leading-[100%] text-card-stone-900">
           Simple Omelette Recipe
         </h1>
-        <p className="pb-card-400 font-card-outfit text-[16px] leading-[150%] text-card-stone-600">
+        <p className="pb-card-400">
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
         </p>
 
         <section className="mb-card-400 flex flex-col gap-card-200 rounded-[12px] bg-card-rose-50 p-card-300 font-card-outfit">
-          <h2 className="text-[20px] leading-[150%] font-semibold text-card-rose-800">
+          <h2 className="text-[20px] leading-[100%] font-semibold text-card-rose-800">
             Preparation time
           </h2>
-          <ul className="flex flex-col gap-card-100 text-[16px]">
+          <ul className="flex flex-col gap-card-100">
             {prepTime.map((time) => (
               <li
                 key={time.name}
-                className="flex items-center gap-card-200 pl-card-200 text-card-stone-600 marker:text-card-rose-800"
+                className="flex items-center gap-card-200 pl-card-200 marker:text-card-rose-800"
               >
                 <div className="mr-2 h-[4px] w-[4px] shrink-0 rounded-full bg-card-rose-800"></div>
-                <p className="leading-[150%]">
-                  <strong>{time.name}:</strong> {time.time}
+                <p>
+                  <strong className="font-bold">{time.name}</strong>:{' '}
+                  {time.time}
                 </p>
               </li>
             ))}
@@ -107,7 +108,7 @@ function App() {
             {ingredients.map((ingredient) => (
               <li
                 key={ingredient.name}
-                className="flex items-center gap-card-200 pl-card-100 font-card-outfit text-[16px] leading-[150%] text-card-stone-600"
+                className="flex items-center gap-card-200 pl-card-100"
               >
                 <div className="mr-2 h-[4px] w-[4px] shrink-0 rounded-full bg-card-rose-800"></div>
                 <p>{ingredient.name}</p>
@@ -126,13 +127,13 @@ function App() {
             {instructions.map((instruction) => (
               <li
                 key={instruction.step}
-                className="flex items-start gap-card-200 pl-card-100 leading-[150%] text-card-stone-600"
+                className="flex items-start gap-card-200 pl-card-100"
               >
-                <span className="shrink-0 font-card-outfit leading-[150%] font-bold text-card-brown-800">
+                <span className="mr-0.5 shrink-0 font-bold text-card-brown-800">
                   {instruction.step}.
                 </span>
-                <p className="font-card-outfit text-[16px] leading-card-300 text-card-stone-600">
-                  <strong>{instruction.title}</strong>:{' '}
+                <p>
+                  <strong className="font-bold">{instruction.title}</strong>:{' '}
                   {instruction.description}
                 </p>
               </li>
@@ -146,7 +147,7 @@ function App() {
           <h2 className="pb-card-300 font-card-young-serif text-[28px] leading-[100%] text-card-brown-800">
             Nutrition
           </h2>
-          <p className="pb-card-300 font-card-outfit text-[16px] leading-[150%] text-card-stone-600">
+          <p className="pb-card-300">
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
@@ -161,10 +162,8 @@ function App() {
                       : ''
                   }
                 >
-                  <td className="py-card-150 pl-card-400 font-card-outfit text-[16px] leading-[150%] text-card-stone-600">
-                    {item.name}
-                  </td>
-                  <td className="pr-card-400 pl-card-200 font-card-outfit text-[16px] leading-[150%] font-bold text-card-brown-800">
+                  <td className="py-card-150 pl-card-400">{item.name}</td>
+                  <td className="pr-card-400 pl-card-200 font-bold text-card-brown-800">
                     {item.value}
                   </td>
                 </tr>
