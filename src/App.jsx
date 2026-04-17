@@ -90,8 +90,10 @@ function App() {
                 key={time.name}
                 className="flex items-center gap-card-200 pl-card-200 text-card-stone-600 marker:text-card-rose-800"
               >
-                <div className="h-1 w-1 rounded-full bg-card-rose-800"></div>
-                <strong>{time.name}:</strong> {time.time}
+                <div className="mr-2 h-[4px] w-[4px] shrink-0 rounded-full bg-card-rose-800"></div>
+                <p className="leading-[150%]">
+                  <strong>{time.name}:</strong> {time.time}
+                </p>
               </li>
             ))}
           </ul>
@@ -107,8 +109,8 @@ function App() {
                 key={ingredient.name}
                 className="flex items-center gap-card-200 pl-card-100 font-card-outfit text-[16px] leading-[150%] text-card-stone-600"
               >
-                <div className="h-1 w-1 shrink-0 rounded-full bg-card-rose-800"></div>
-                {ingredient.name}
+                <div className="mr-2 h-[4px] w-[4px] shrink-0 rounded-full bg-card-rose-800"></div>
+                <p>{ingredient.name}</p>
               </li>
             ))}
           </ul>

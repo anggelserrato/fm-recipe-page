@@ -23,6 +23,6 @@
 
 @layer base {
   body {
-    background-color: var(--color-card-stone-100);
+    background-color: white;
   }
 }
