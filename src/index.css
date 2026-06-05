@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('./fonts/Outfit.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./fonts/YoungSerif.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
 
 @theme {
   --color-card-stone-100: hsl(30, 54%, 90%);
@@ -9,16 +22,16 @@
   --color-card-brown-800: hsl(14, 45%, 36%);
   --color-card-rose-800: hsl(332, 51%, 32%);
   --color-card-rose-50: hsl(330, 100%, 98%);
-  --font-card-young-serif: 'Young Serif', ui-sans-serif, system-ui, sans-serif;
-  --font-card-outfit: 'Outfit', ui-sans-serif, system-ui, sans-serif;
-  --spacing-card-100: 8px;
-  --spacing-card-150: 12px;
-  --spacing-card-200: 16px;
-  --spacing-card-300: 24px;
-  --spacing-card-400: 32px;
-  --spacing-card-500: 40px;
-  --spacing-card-600: 48px;
-  --spacing-card-1600: 128px;
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Young Serif', ui-sans-serif, system-ui, sans-serif;
+  --spacing-card-100: 0.5rem;
+  --spacing-card-150: 0.75rem;
+  --spacing-card-200: 1rem;
+  --spacing-card-300: 1.5rem;
+  --spacing-card-400: 2rem;
+  --spacing-card-500: 2.5rem;
+  --spacing-card-600: 3rem;
+  --spacing-card-1600: 8rem;
 }
 
 @layer base {
