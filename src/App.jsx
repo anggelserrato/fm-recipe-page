@@ -71,21 +71,19 @@ function App() {
           className="h-full w-full object-cover"
         />
       </figure>
-      <article className="px-card-400 py-card-500 font-card-outfit text-[16px] leading-[150%] text-card-stone-600 md:px-0 md:pb-0">
-        <h1 className="pb-card-300 font-card-young-serif text-4xl leading-[100%] text-card-stone-900 md:text-[40px]">
+      <article className="px-card-400 py-card-500 md:px-0 md:pb-0">
+        <h1 className="pb-card-300 text-preset-1 text-card-stone-900">
           Simple Omelette Recipe
         </h1>
 
-        <p className="pb-card-400">
+        <p className="pb-card-400 text-preset-4-regular text-card-stone-600">
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
         </p>
 
-        <section className="mb-card-400 flex flex-col gap-card-200 rounded-[12px] bg-card-rose-50 p-card-300 font-card-outfit">
-          <h2 className="text-[20px] leading-[100%] font-semibold text-card-rose-800">
-            Preparation time
-          </h2>
+        <section className="mb-card-400 flex flex-col gap-card-200 rounded-[12px] bg-card-rose-50 p-card-300">
+          <h2 className="text-preset-3 text-card-rose-800">Preparation time</h2>
           <ul className="flex flex-col gap-card-100">
             {prepTime.map((time) => (
               <li
@@ -93,9 +91,11 @@ function App() {
                 className="flex items-center gap-card-200 pl-card-200 marker:text-card-rose-800"
               >
                 <div className="mr-2 h-[4px] w-[4px] shrink-0 rounded-full bg-card-rose-800"></div>
-                <p>
-                  <strong className="font-bold">{time.name}</strong>:{' '}
-                  {time.time}
+                <p className="text-preset-4 text-card-stone-600">
+                  <strong className="text-preset-4-bold text-card-stone-600">
+                    {time.name}
+                  </strong>
+                  : {time.time}
                 </p>
               </li>
             ))}
@@ -103,7 +103,7 @@ function App() {
         </section>
 
         <section className="pb-card-400">
-          <h2 className="pb-card-300 font-card-young-serif text-[28px] leading-[100%] text-card-brown-800">
+          <h2 className="pb-card-300 text-preset-2 text-card-brown-800">
             Ingredients
           </h2>
           <ul className="flex flex-col gap-card-100">
@@ -113,7 +113,9 @@ function App() {
                 className="flex items-center gap-card-200 pl-card-100"
               >
                 <div className="mr-2 h-[4px] w-[4px] shrink-0 rounded-full bg-card-rose-800"></div>
-                <p>{ingredient.name}</p>
+                <p className="text-preset-4 text-card-stone-600">
+                  {ingredient.name}
+                </p>
               </li>
             ))}
           </ul>
@@ -122,7 +124,7 @@ function App() {
         <hr className="border-card-stone-150" />
 
         <section className="py-card-400">
-          <h2 className="pb-card-300 font-card-young-serif text-[28px] leading-[100%] text-card-brown-800">
+          <h2 className="pb-card-300 text-preset-2 text-card-brown-800">
             Instructions
           </h2>
           <ol className="flex flex-col gap-card-100">
@@ -131,12 +133,14 @@ function App() {
                 key={instruction.step}
                 className="flex items-start gap-card-200 pl-card-100"
               >
-                <span className="mr-0.5 shrink-0 font-bold text-card-brown-800">
+                <span className="mr-0.5 shrink-0 text-preset-4-bold text-card-brown-800">
                   {instruction.step}.
                 </span>
-                <p>
-                  <strong className="font-bold">{instruction.title}</strong>:{' '}
-                  {instruction.description}
+                <p className="text-preset-4-regular text-card-stone-600">
+                  <strong className="text-preset-4-bold text-card-stone-600">
+                    {instruction.title}
+                  </strong>
+                  : {instruction.description}
                 </p>
               </li>
             ))}
@@ -146,10 +150,10 @@ function App() {
         <hr className="border-card-stone-150" />
 
         <section className="pt-card-400">
-          <h2 className="pb-card-300 font-card-young-serif text-[28px] leading-[100%] text-card-brown-800">
+          <h2 className="pb-card-300 text-preset-2 text-card-brown-800">
             Nutrition
           </h2>
-          <p className="pb-card-300">
+          <p className="text-preset-4 pb-card-300 text-card-stone-600">
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
@@ -164,8 +168,10 @@ function App() {
                       : ''
                   }
                 >
-                  <td className="py-card-150 pl-card-400">{item.name}</td>
-                  <td className="pr-card-400 pl-card-200 font-bold text-card-brown-800">
+                  <td className="text-preset-4 py-card-150 pl-card-400 text-card-stone-600">
+                    {item.name}
+                  </td>
+                  <td className="pr-card-400 pl-card-200 text-preset-4-bold text-card-brown-800">
                     {item.value}
                   </td>
                 </tr>
