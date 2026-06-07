@@ -46,5 +46,5 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ## Author
 
-- Website - [serrato.me](https://www.serrato.me)
+- Website - [serrato.dev](https://www.serrato.dev)
 - Frontend Mentor - [@anggelserrato](https://www.frontendmentor.io/profile/anggelserrato)
